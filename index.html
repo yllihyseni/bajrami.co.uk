@@ -1,77 +1,91 @@
 <html>
 
 <head>
-  <meta charset="utf-8">
-  <title>bajrami.co.uk</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <style>
-    body {
-  background: #000;
-}
+   <meta charset="utf-8">
+   <title>bajrami.co.uk</title>
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <style>
+      body {
+         background: #000;
+         height: 100vh;
+         width: 100vw;
+         padding: 0;
+         margin: 0;
+         display: flex;
+         align-items: center;
+         justify-content: center;
+         overflow: hidden;
+      }
 
-div {
-  color: red;
-  font-family: Monaco, monospace;
-  font-size: 24px;
-  width: 100%;
-  text-align: center;
-  position: absolute;
-  top: 45%;
-  left: 0;
-  animation: 120ms infinite normal glitch;
-}
+      .el {
+         color: red;
+         font-family: Monaco, monospace;
+         font-size: 24px;
+         animation: 120ms infinite normal glitch;
+      }
 
-span {
-  animation: 1.5s infinite normal imleç;
-}
+      span {
+         animation: 1.5s infinite normal imleç;
+      }
 
-::-moz-selection {
-  background: #7021d2;
-  color: #fff;
-}
+      ::-moz-selection {
+         background: #7021d2;
+         color: #fff;
+      }
 
-::selection {
-  background: #7021d2;
-  color: #fff;
-}
+      ::selection {
+         background: #7021d2;
+         color: #fff;
+      }
 
-@keyframes glitch {
-  0% {
-    opacity: 0;
-    left: 0;
-  }
-  40%,
-  80% {
-    opacity: 1;
-    left: -2px;
-  }
-}
+      @keyframes glitch {
+         0% {
+            opacity: 0;
+            left: 0;
+         }
 
-@keyframes imleç {
-  0% {
-    opacity: 0;
-    left: 0;
-  }
-  40% {
-    opacity: 0;
-    left: -2px;
-  }
-  80% {
-    opacity: 1;
-    left: -2px;
-  }
-}
+         40%,
+         80% {
+            opacity: 1;
+            left: -2px;
+         }
+      }
 
-  </style>
+      @keyframes imleç {
+         0% {
+            opacity: 0;
+            left: 0;
+         }
+
+         40% {
+            opacity: 0;
+            left: -2px;
+         }
+
+         80% {
+            opacity: 1;
+            left: -2px;
+         }
+      }
+   </style>
 </head>
 
 <body>
 
-  <body oncontextmenu="return false" onselectstart="return false" ondragstart="return false">
-    <div id="yazı">█ █ █ █ █ █ █ <span style="color:black">█ █ █ █ █ </span>52%
-      <br>&gt; Coming Soon&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-      <br>&gt; bajrami.co.uk  <span id="imleç">█</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-    </div>
-  </body>
+   <body>
+      <div style="display: flex;flex-direction: column;max-width: 100%;">
+
+         <div class="el">
+            █ █ █ █ █ █ █ <span style="color:black">█ █ █ █ █ </span>52%
+         </div>
+
+         <div class="el" style="margin-top: 15px;">
+            &gt; Coming Soon
+         </div>
+         <div class="el">
+            &gt; bajrami.co.uk
+         </div>
+      </div>
+   </body>
 
 </html>
